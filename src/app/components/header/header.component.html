@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <button mat-button (click)="home()">Home</button>
+    <span class="spacer"></span>
+    @if(isGuest$ | async; as isGuest){
+        <button mat-button (click)="login()">Connexion</button>
+    }
+    @else{
+        <button mat-button (click)="group()">Groupes</button>
+        <button mat-button (click)="settings()">Paramètres</button>
+        <button mat-button (click)="logout()">Déconnexion</button>
+    }
+  </mat-toolbar>
